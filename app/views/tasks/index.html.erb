@@ -3,5 +3,6 @@
 <% @tasks.each do |task| %>
   <p>
     <%= task.title %>
+    <%= link_to "削除", task_path(task), method: :delete, data: {confirm: "削除しますか？"} %>
   </p>
 <% end %>
